@@ -1,5 +1,33 @@
 import functions from "./functions";
 
+// beforeEach(() => initDatabase());
+// afterEach(() => closeDatabase());
+
+// beforeAll(() => initDatabase());
+// afterAll(() => closeDatabase());
+
+// const initDatabase = () => console.log("Database initialized")
+// const closeDatabase = () => console.log("Database closed");
+
+const nameCheck = () => console.log("Checking names...");
+
+describe("Checking Names", () => {
+    beforeEach(() => nameCheck());
+
+    test("User is Josh", () => {
+        const user = "Josh";
+        expect(user).toBe("Josh");
+    });
+
+    test("User is Karen", () => {
+        const user = "Karen";
+        expect(user).toBe("Karen");
+    });
+
+    // afterEach(() => closeDatabase());
+})
+
+
 //* toBe
 test("Adds 2 + 2 to equal 4", () => {
     expect(functions.add(2,2)).toBe(4);
@@ -61,6 +89,5 @@ test("Admind should be in usernames", () => {
 test("User fetched name should be 이정도", async () => {
     expect.assertions(1);
     const data = await functions.fetchUser();
-    console.log(data.name);
     expect(data.name).toEqual("이정도");
 })
