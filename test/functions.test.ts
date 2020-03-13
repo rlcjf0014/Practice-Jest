@@ -1,5 +1,20 @@
-import functions from "./functions";
+import functions from "../src/functions";
 
+interface personalInfo {
+    id: number;
+    name: string;
+    username: string;
+    email:string;
+    phone:string;
+    website: string;
+    province: string;
+    city: string;
+    district: string;
+    stree: string;
+    zipcode: string;
+    createdAt: string;
+    updatedAt: string;
+};
 // beforeEach(() => initDatabase());
 // afterEach(() => closeDatabase());
 
@@ -73,7 +88,7 @@ test("There is no I in team", () => {
 
 //* Arrays
 test("Admind should be in usernames", () => {
-    const usernames = ["David", "Karen", "John", "Admin"];
+    const usernames:Array<string> = ["David", "Karen", "John", "Admin"];
     expect(usernames).toContain("David");
 })
 
@@ -88,6 +103,6 @@ test("Admind should be in usernames", () => {
 //* Async Await
 test("User fetched name should be 이정도", async () => {
     expect.assertions(1);
-    const data = await functions.fetchUser();
+    const data:personalInfo = await functions.fetchUser();
     expect(data.name).toEqual("이정도");
 })
