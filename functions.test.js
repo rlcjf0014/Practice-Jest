@@ -12,7 +12,7 @@ import functions from "./functions";
 const nameCheck = () => console.log("Checking names...");
 
 describe("Checking Names", () => {
-    beforeEach(() => nameCheck());
+    beforeAll(() => nameCheck());
 
     test("User is Josh", () => {
         const user = "Josh";
@@ -24,7 +24,12 @@ describe("Checking Names", () => {
         expect(user).toBe("Karen");
     });
 
-    // afterEach(() => closeDatabase());
+    test("User is David", () => {
+        const user = "David";
+        expect(user).toBe("David");
+    });
+
+    afterAll(() => nameCheck());
 })
 
 
