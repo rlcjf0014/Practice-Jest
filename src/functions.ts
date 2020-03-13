@@ -5,8 +5,7 @@ const functions = {
     isNull: ():null => null,
     checkValue: (x:any):any => x,
     createUser: ():{firstName: string, lastName:string} => {
-        const user:{firstName: string, lastName:string} = {firstName: "Joshua", lastName:null};
-        user["lastName"] = "Song";
+        const user:{firstName: string, lastName:string} = {firstName: "Joshua", lastName: "Song" };
         return user;
     },
     fetchUser: () => axios.get("https://koreanjson.com/users/1")

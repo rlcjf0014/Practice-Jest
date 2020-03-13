@@ -30,12 +30,12 @@ describe("Checking Names", () => {
     beforeEach(() => nameCheck());
 
     test("User is Josh", () => {
-        const user = "Josh";
+        const user:string = "Josh";
         expect(user).toBe("Josh");
     });
 
     test("User is Karen", () => {
-        const user = "Karen";
+        const user:string = "Karen";
         expect(user).toBe("Karen");
     });
 
@@ -76,8 +76,8 @@ test("User should be Joshua Song", () => {
 
 //* Less than and greater than
 test("Should be under 1600", () => {
-    const load1 = 800;
-    const load2 = 800;
+    const load1:number = 800;
+    const load2:number = 800;
     expect (load1 + load2).toBeLessThanOrEqual(1600);
 })
 
