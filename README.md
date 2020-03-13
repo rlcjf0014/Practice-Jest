@@ -8,5 +8,5 @@ yarn test / npm run test
 ```
 
 # Credit
-Props to Travery Media for this helpful video. 
+Props to Travery Media for th helpful video. 
 https://www.youtube.com/watch?v=7r4xVDI2vho
