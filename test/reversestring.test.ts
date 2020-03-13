@@ -1,4 +1,4 @@
-import reverseString from "./reversestring";
+import reverseString from "../src/reversestring";
 
 test ("reverseString function exists", () => {
     expect(reverseString).toBeDefined()

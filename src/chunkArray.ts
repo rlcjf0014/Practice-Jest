@@ -1,11 +1,11 @@
-const chunkArray = (arr, len) => {
+const chunkArray = (arr:Array<number>, len:number) => {
     // Init chunked arr
-    const chunkedArr = [];
+    const chunkedArr:Array<any> = [];
 
     //Looop through arr
     arr.forEach(val => {
         // Get Last Element
-        const last = chunkedArr[chunkedArr.length - 1]
+        const last:Array<number> = chunkedArr[chunkedArr.length - 1]
 
         //check if last and if last length is equal to the chunk len
 
